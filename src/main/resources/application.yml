@@ -9,6 +9,9 @@ eureka:
 spring:
   application:
     name: api-gateway
+  sleuth:
+    sampler:
+      probability: 1.0 #1.0 = 100% de cobertura de logs. Utilizar somente para testes. Em prod reduzir para próximo de 0.05
   cloud:
     gateway:
       discovery:
